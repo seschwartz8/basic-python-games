@@ -1,5 +1,7 @@
 # Rock-paper-scissors-lizard-Spock by Sarah Schwartz
 
+import simplegui
+
 def name_to_number(name):
     """
     Converts name to number 0-4 and returns the number
@@ -15,7 +17,7 @@ def name_to_number(name):
     elif (name == "scissors") or (name == "scissor"):
         number = 4
     else:
-        print ("Error, name input not valid")
+        print "Error, name input not valid"
     return number
 
 
@@ -35,7 +37,7 @@ def number_to_name(number):
     elif number == 4:
         name = "scissors"
     else:
-        print ("Error, number input not in valid range")
+        print "Error, number input not in valid range"
     return name
             
     
@@ -44,33 +46,43 @@ def rpsls(player_choice):
     """
     Compares player's choice to random computer choice and returns winner
     """
-    print ("\n")
+    print "\n"
     
     #Player's choice
-    print ("Player chooses " + player_choice)
+    print "Player chooses " + player_choice
     player_number = name_to_number (player_choice)
     
     #Computer's choice
     import random
     comp_number = random.randrange (0,5)
     comp_choice = number_to_name (comp_number)
-    print ("Computer chooses " + comp_choice)
+    print "Computer chooses " + comp_choice
     
     #Determining winner using modulo five
     c_p_difference = (comp_number - player_number) % 5
     if (c_p_difference == 1) or (c_p_difference == 2):
-        print ("Player wins!")
+        print "Player wins!"
     elif (c_p_difference == 3) or (c_p_difference == 4):
-        print ("Computer wins!")
+        print "Computer wins!"
     elif c_p_difference == 0:
-        print ("Player and computer tie!")
+        print "Player and computer tie!"
 
-    
-    
-    
-# test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
-rpsls("rock")
-rpsls("Spock")
-rpsls("paper")
-rpsls("lizard")
-rpsls("scissors")
+def handle_input(txt):
+    """
+    Starts RPSLS game and prints input to screen
+    """
+    if not (txt == "rock" or
+            txt == "paper" or
+            txt == "scissors" or
+            txt == "lizard" or
+            txt == "Spock"):
+        print "\n" + "Invalid choice, play again."
+    else:
+        return rpsls(txt)
+
+        
+#Create frame and input
+frame = simplegui.create_frame('RPSLS', 200, 200)
+frame.add_input('Your play (hit enter):', handle_input, 50)
+
+frame.start()
