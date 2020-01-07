@@ -1,4 +1,6 @@
-# python-games
+# Python Games
+
+## Created by Sarah "Sasa" Schwartz
 A bunch of simple python games you can play using CodeSkulptor.<br/>
 
 This repo contains samples of the python code for each game. Games are playable at the following links: <br/>
@@ -17,3 +19,9 @@ Yahtzee Strategy: http://www.codeskulptor.org/#user46_RD3JURMdsv_11.py <br/>
 Cookie Clicker Strategy: http://www.codeskulptor.org/#user46_6GqtsODCKM_43.py <br/>
 
 These games were based on assignments from Rice University via Coursera. Courses included Introduction to Interactive Programming in Python Part 1 and 2 and Principles of Computing Part 1.
+
+## Technologies
+Python, Codeskulptor.org
+
+## Licensing
+MIT
