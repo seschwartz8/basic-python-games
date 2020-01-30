@@ -1,8 +1,11 @@
 # Python Games
 
 ## Created by Sarah "Sasa" Schwartz
-A bunch of simple python games you can play using CodeSkulptor.<br/>
 
+## Description
+Simple python games you can play using CodeSkulptor.<br/>
+
+## Setup
 This repo contains samples of the python code for each game. Games are playable at the following links: <br/>
 Rock Paper Scissors Lizard Spock: http://www.codeskulptor.org/#user46_Y6uQ6Q6c0Q3WgGq_0.py <br/>
 Guess The Number: http://www.codeskulptor.org/#user46_YcLYGyaIBW_3.py <br/>
